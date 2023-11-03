@@ -1,4 +1,4 @@
-# journal
+# Bookday App
 
 ## Project setup
 ```
