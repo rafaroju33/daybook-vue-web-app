@@ -1,0 +1,31 @@
+crear una aplicacion
+    vue create journal
+
+Para instalar bootsrap
+    yarn add bootstrap
+
+Para usar sass debemos instalar sass
+    yarn add -D sass-loader@10 sass
+
+Debemos de configurar nuestro proyecto para que el webpack use sass
+Creamos el siguiente archivo
+    styles/styles.scss y dentro importamos bootsrap.scss con la siguiente linea
+    @import 'node_modules/bootstrap/scss/bootstrap.scss'
+Despues nos vemos al main.js y configuramos este para usar sass el archivo styles.scss
+    import "./styles/styles.scss";
+
+
+Al momento de crear un componente con un nombre simple y no compuesto
+como Navbar, este puede dar un error:
+    error Component name "Navbar" should always be multi-word vue/multi-word-component-names
+
+y lo unico que hay que hacer es en el archivo .eslintrc.js, añadir y bajar y levantar el proyecto nuevamente
+rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+ -> 'vue/multi-word-component-names': 0, // disable this rule just for views
+  }
+
+
+  instalar vuex
+  yarn add vuex@next --save
